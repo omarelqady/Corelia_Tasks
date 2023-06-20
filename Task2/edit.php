@@ -49,8 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($field === 'password' && isset($_POST['password'])) {
             // Update the password
             $password = $_POST['password'];
-            // Hash the password before storing it in the database (ensure proper password hashing techniques)
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+           $$hashedPassword=md5($password )
             $sql = "UPDATE users SET password = :password WHERE idusers = :id";
             $stmt = $conn->prepare($sql);
             $stmt->execute([':password' => $hashedPassword, ':id' => $userId]);
