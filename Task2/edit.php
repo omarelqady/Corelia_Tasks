@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($field === 'password' && isset($_POST['password'])) {
             // Update the password
             $password = $_POST['password'];
-           $$hashedPassword=md5($password )
+           $hashedPassword=md5($password );
             $sql = "UPDATE users SET password = :password WHERE idusers = :id";
             $stmt = $conn->prepare($sql);
             $stmt->execute([':password' => $hashedPassword, ':id' => $userId]);
