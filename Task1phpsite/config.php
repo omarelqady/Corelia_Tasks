@@ -10,7 +10,7 @@
 <?php
 $dsn = "mysql:host=localhost;dbname=todo";
 $username = "root";
-$password = "242354578";
+$password = "ur password here";
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
